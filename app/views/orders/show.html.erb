@@ -1,0 +1,22 @@
+<div class="card" style="width: 100%;">
+    <picture><%= image_tag @order.product.image%></picture>
+    <div class="card-body">
+      <h3 class="card-title"><%= @order.product.name%></h3>
+      <h2 class="card-title"><%=number_to_currency @order.product.price%></h2>
+      <h6><%= @order.product.user.name%></h6>
+       <p class="card-text"><%= @order.product.category%></p>
+      <p class="card-text"><%= @order.product.description%></p>
+    </div>
+  </div>
+  <div class="card" style="width: 100%;">
+    <div class="card-body">
+      <h2 class="card-title"><%= @order.comment.user.name%></h2>
+      <p class="card-text"><%= @order.comment.text%></p>
+    </div>
+  </div>
+  <p>Dúvidas</p>
+    <% @order.product.comments.each do |comment|%>
+      <p><%= comment%></p>
+    <%end%>
+  <%= render partial: 'shared/form_comment', locals: {comment: [ @order , @comment]} %>
+<%= link_to 'Voltar', product_path(@order.product) %>

@@ -4,6 +4,7 @@
   <div class="card-body">
     <h3 class="card-title"><%= @product.name%></h3>
     <h2 class="card-title"><%=number_to_currency @product.price%></h2>
+    <p class="card-text"><%= @product.category%></p>
     <p class="card-text"><%= @product.description%></p>
     <% if @product.orders.empty?%>
       <%= link_to 'Negociar', product_orders_path(@product), method: :post %>
