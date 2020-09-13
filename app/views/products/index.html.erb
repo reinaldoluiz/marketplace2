@@ -1,0 +1,17 @@
+<%= link_to 'Criar novo produto', new_product_path %>
+
+<% if @products.empty?%>
+  <p>Sem produto por enquanto</p>
+<%else%>
+  <% @products.each do |product|%>
+    <div class="card" style="width: 18rem;">
+      <%= image_tag product.image%>
+      <div class="card-body">
+        <h5 class="card-title"><%= product.name%></h5>
+        <p class="card-text"><%= product.description%></p>
+        <p class="card-text"><%= product.user.name%></p>
+        <%= link_to 'Detalhes', product_path(id: product.id), class:"btn btn-outline-secondary" %>
+      </div>
+    </div>
+  <%end%>
+<%end%>

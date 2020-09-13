@@ -1,0 +1,18 @@
+
+  <div class="card" style="width: 100%;">
+  <%= image_tag @product.image%>
+  <div class="card-body">
+    <h3 class="card-title"><%= @product.name%></h3>
+    <h2 class="card-title"><%=number_to_currency @product.price%></h2>
+    <p class="card-text"><%= @product.description%></p>
+    <% if @product.orders.empty?%>
+      <%= link_to 'Negociar', product_orders_path(@product), method: :post %>
+    <%else%>
+      <%= link_to 'Negociar', product_order_path(@product) %>
+    <%end%>
+    <p>Dúvidas</p>
+    
+  </div>
+  
+</div>
+<%= link_to 'Voltar', @products %>
