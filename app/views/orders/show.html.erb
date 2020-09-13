@@ -9,5 +9,8 @@
     </div>
   </div>
   <h3>Dúvidas</h3>
-  <p>Para começar o negócio crie um comentário</p>
+  <%= render partial: 'comments/comments', locals:{commentable: @order}%>
+  <%= render partial: 'comments/form', locals:{commentable: @order}%>
+  
+  
 <%= link_to 'Voltar', product_path(@order.product) %>

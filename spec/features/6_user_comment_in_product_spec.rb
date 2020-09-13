@@ -8,8 +8,8 @@ feature 'User comment in product' do
     produto = Product.create!(name: 'Carro', price: '150000', description: 'O carro da sua vida, não encontrará nada melhor!', user: user )
     image_file = File.open( Rails.root.join('spec/support/bike.jpg'))
     produto.image.attach(io: image_file, filename: "bike.jpg", content_type: "image/png")
-    comment_seller = Comment.create!(user: user, text: 'Para começar o negócio crie um comentário', negociation: true )
-    comment_buyer = Comment.create!(user: other_user, text: 'Gostei bastante do carro, mas conseguimos negociar o valor', negociation: true)
+    comment_seller = Comment.create!(user_id: user, body: 'Para começar o negócio crie um comentário')
+    comment_buyer = Comment.create!(user_id: other_user, body: 'Gostei bastante do carro, mas conseguimos negociar o valor')
     my_order = Order.create!(product: produto, user: other_user, comment: comment_seller, status: :negociation)
     #Act
     login_as(other_user, scope: :user)

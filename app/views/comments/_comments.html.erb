@@ -1,0 +1,9 @@
+<%if commentable.comments.empty?%>
+    <p>Para começar o negócio crie um comentário</p>
+  <%else%>
+    <% commentable.comments.each do |comment|%>
+      <div class='well'>
+        <%= comment.body%>
+      </div>
+    <%end%>
+  <%end%>
