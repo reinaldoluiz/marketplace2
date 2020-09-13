@@ -8,15 +8,6 @@
       <p class="card-text"><%= @order.product.description%></p>
     </div>
   </div>
-  <div class="card" style="width: 100%;">
-    <div class="card-body">
-      <h2 class="card-title"><%= @order.comment.user.name%></h2>
-      <p class="card-text"><%= @order.comment.text%></p>
-    </div>
-  </div>
-  <p>Dúvidas</p>
-    <% @order.product.comments.each do |comment|%>
-      <p><%= comment%></p>
-    <%end%>
-  <%= render partial: 'shared/form_comment', locals: {comment: [ @order , @comment]} %>
+  <h3>Dúvidas</h3>
+  <p>Para começar o negócio crie um comentário</p>
 <%= link_to 'Voltar', product_path(@order.product) %>
