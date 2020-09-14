@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'orders/:order_id/comments/:id', to: 'orders/comments#show'
   resources :products, only:[:index, :show, :new, :create] do
     resources :comments, module: :products
-    resources :orders,  only:[:index, :show, :new,:create]do 
+    resources :orders,  only:[:index, :show,:create]do 
       resources :comments, module: :orders
     end
   end
