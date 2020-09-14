@@ -1,16 +1,19 @@
 <div class="card" style="width: 100%;">
-    <picture><%= image_tag @order.product.image%></picture>
+   <%= image_tag @order.product.image%>
     <div class="card-body">
       <h3 class="card-title"><%= @order.product.name%></h3>
       <h2 class="card-title"><%=number_to_currency @order.product.price%></h2>
       <h6><%= @order.product.user.name%></h6>
        <p class="card-text"><%= @order.product.category%></p>
       <p class="card-text"><%= @order.product.description%></p>
+      <h3>Negociar</h3>
+    <%= render partial: 'comments/comments', locals:{commentable: @order}%>
+    <%= render partial: 'comments/form', locals:{commentable: @order}%>
     </div>
+    
   </div>
-  <h3>Dúvidas</h3>
-  <%= render partial: 'comments/comments', locals:{commentable: @order}%>
-  <%= render partial: 'comments/form', locals:{commentable: @order}%>
   
+  <div class="card card-body">
+    <%= link_to 'Voltar', product_path(@order.product), class:'btn btn-info' %>
+  </div>
   
-<%= link_to 'Voltar', product_path(@order.product) %>

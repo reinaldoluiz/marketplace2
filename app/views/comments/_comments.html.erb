@@ -2,7 +2,7 @@
     <p>Para começar o negócio crie um comentário</p>
   <%else%>
     <% commentable.comments.each do |comment|%>
-      <div class='well'>
+      <div class='card card-body bg-light'>
         <%= comment.body%>
       </div>
     <%end%>

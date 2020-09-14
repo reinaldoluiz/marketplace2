@@ -5,7 +5,7 @@
 <%else%>
   <% @products.each do |product|%>
     <div class="card" style="width: 18rem;">
-      <%= image_tag product.image%>
+     <%= image_tag product.image%>
       <div class="card-body">
         <h5 class="card-title"><%= product.name%></h5>
         <p class="card-text"><%= product.description%></p>
