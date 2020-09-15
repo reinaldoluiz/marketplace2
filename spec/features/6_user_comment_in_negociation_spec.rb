@@ -8,17 +8,15 @@ feature 'User comment in negociation' do
     produto = Product.create!(name: 'Carro', price: '150000', description: 'O carro da sua vida, não encontrará nada melhor!', user: user )
     image_file = File.open( Rails.root.join('spec/support/bike.jpg'))
     produto.image.attach(io: image_file, filename: "bike.jpg", content_type: "image/png")
-    comment_seller = Comment.create!(user: user, text: 'Para começar o negócio crie um comentário', status: :negociation )
-    comment_buyer = Comment.create!(user: other_user, text: 'Gostei bastante do carro, mas conseguimos negociar o valor', status: :negociation)
-    my_order = Order.create!(product_id: produto.id, user: other_user, comment: comment_seller, status: :negociation)
+    my_order = Order.create!(product_id: produto.id, user: other_user, status: :negociation)
     #Act
     login_as(other_user, scope: :user)
     visit root_path
     click_on 'Produtos'
     click_on 'Detalhes'
     click_on 'Negociar'
-    fill_in 'Comentário', with: comment_buyer
-    click_on 'Enviar'
+    fill_in 'comment[body]', with: "Gostei do carro, vamo fechar por 30% do preço!"
+    click_on 'Criar Comentário'
     #Assert
     
     expect(current_path).to eq order_path(my_order.id)
@@ -28,10 +26,8 @@ feature 'User comment in negociation' do
     expect(page).to have_content('Silvio Santos')
     expect(page).to have_content(user.name)
     expect(page).to have_content(other_user.name)
-    expect(page).to have_content(comment)
     expect(page).to have_content('Gostei do carro, vamo fechar por 30% do preço!')
     expect(page).to have_css('img[src$="bike.jpg"]')
-    expect(page).to have_link('Novo Comentário')
     expect(page).to have_link('Voltar')
   end
 end
