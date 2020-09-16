@@ -1,1 +1,11 @@
 @import "bootstrap/scss/bootstrap";
+
+.products{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn{
+    margin: 20px;
+}

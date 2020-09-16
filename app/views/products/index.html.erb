@@ -1,6 +1,9 @@
-<%= link_to 'Criar novo produto', new_product_path %>
+<section>
+  <%= link_to 'Criar novo produto', new_product_path, class:"btn btn-outline-success" %>
+</section>
 
-<% if @products.empty?%>
+<section class='products'>
+  <% if @products.empty?%>
   <p>Sem produto por enquanto</p>
 <%else%>
   <% @products.each do |product|%>
@@ -20,3 +23,6 @@
     </div>
   <%end%>
 <%end%>
+
+
+</section>
