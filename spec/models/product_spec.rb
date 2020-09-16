@@ -15,7 +15,8 @@ describe Product, type: :model do
     end
 
     it 'name must be uniq' do
-      Product.create!(name: 'Fusca', category:'Carro', price: '12345646', description: '')
+      user = User.create!(name:'Silvio Santos', email:'silvio@sbt.com', password:'12345678')
+      Product.create!(name: 'Fusca', category:'Carro', price: '12345646', description: 'Teste teste', user: user)
       product = Product.new(name: 'Fusca')
 
       product.valid?

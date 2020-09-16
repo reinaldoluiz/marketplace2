@@ -5,7 +5,7 @@ feature 'User comment in negociation' do
     #Arrange
     user = User.create!(name:'Silvio Santos', email:'silvio@sbt.com', password:'12345678')
     other_user = User.create!(name:'Carlos Alberto', email:'carlos@sbt.com', password:'12345678')
-    produto = Product.create!(name: 'Carro', price: '150000', description: 'O carro da sua vida, não encontrará nada melhor!', user: user )
+    produto = Product.create!(name: 'Carro',category:'Automóvel', price: '150000', description: 'O carro da sua vida, não encontrará nada melhor!', user: user )
     image_file = File.open( Rails.root.join('spec/support/bike.jpg'))
     produto.image.attach(io: image_file, filename: "bike.jpg", content_type: "image/png")
     my_order = Order.create!(product_id: produto.id, user: other_user, status: :negociation)
