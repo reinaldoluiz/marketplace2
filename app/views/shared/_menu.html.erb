@@ -11,6 +11,13 @@
     </ul>
   </div>
   <div class="nav-item">
+    <%= form_with url: search_path, method: :get, local:true do |f| %>
+      <%= f.label :q, 'Busca:' %>
+      <%= f.text_field :q%>
+      <%= f.submit 'Pesquisar',class:'btn btn-outline-success my-2 my-sm-0' %>
+    <% end %>
+  </div>
+  <div class="nav-item">
       <% if user_signed_in? %>
         <%= current_user.name%>
         <%= link_to 'Sair', destroy_user_session_path,  :method => :delete%>
