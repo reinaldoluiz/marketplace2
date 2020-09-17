@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'User buy product' do 
-  scenario 'sucessfully' do 
+  xscenario 'sucessfully' do 
     #Arrange
     user = User.create!(name:'Silvio Santos', email:'silvio@sbt.com', password:'12345678')
     other_user = User.create!(name:'Carlos Alberto', email:'carlos@sbt.com', password:'12345678')

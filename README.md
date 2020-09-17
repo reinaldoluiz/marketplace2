@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Study project for a markeplace in ruby on rails, for treinadev
 
-Things you may want to cover:
+Seed User: name:'Admin', email:'admin@admin.com', password:'12345678'
 
-* Ruby version
+GEM INSTALL: rspec-rails - capybara - Devise
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
