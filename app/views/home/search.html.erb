@@ -1,6 +1,5 @@
 <div class="container">
   <h1>Resultados da busca</h1>
-  <ul>
     <% @products.each do |product| %>
       <div class="card" style="width: 18rem;">
      <% if product.image.attached?%>
@@ -17,5 +16,5 @@
       </div>
     </div>
     <% end %>
-  </ul>
 </div>
+<%= render 'shared/footer'%>  
