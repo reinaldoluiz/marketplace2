@@ -13,7 +13,7 @@ feature 'User search product by category' do
     capitu = Product.create!(name: 'Capitu',category:'Livro', price: '1100', description: 'Clássico brasileiro!', user: user3 )
     macunaima = Product.create!(name: 'Macunaima',category:'Livro', price: '1200', description: 'Super divertido!', user: user2 )
 
-     login_as(user1, scope: :user)
+    login_as(user1, scope: :user)
     visit root_path 
     fill_in 'Busca', with: 'Automóvel'
     click_on 'Pesquisar'
