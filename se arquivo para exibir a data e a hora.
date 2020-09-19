@@ -1,0 +1,143 @@
+[33mcommit c566cfda111022ea05b81155730a05f8244785ae[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Fri Sep 18 12:45:46 2020 -0300
+
+    WIP adjust test and rename
+
+[33mcommit f148d00dc50510da6633bcbadf1f86796facec27[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Fri Sep 18 12:06:36 2020 -0300
+
+    Delete tests empties
+
+[33mcommit 7add392293fd14c795c4b81903907240412d7d79[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Thu Sep 17 20:23:48 2020 -0300
+
+    Write some tests
+
+[33mcommit c503fe4b301d337e0892eaddf37f1d8c5d48e021[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Thu Sep 17 19:53:11 2020 -0300
+
+    Seed
+
+[33mcommit e17ef5b776f2cfaeff8352aa84c4cc0c3b4a153c[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Thu Sep 17 14:03:45 2020 -0300
+
+    User search a category
+
+[33mcommit 56c147e691920285afc82efd227c11fefdfd75d8[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Wed Sep 16 21:07:24 2020 -0300
+
+    footer with  categories
+
+[33mcommit 974c7c0273be96f009897b76431c10a68141bb98[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Wed Sep 16 20:42:06 2020 -0300
+
+    User search a product or a category
+
+[33mcommit a9580650de35ed1457460d94d5c997f6f42f611b[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Wed Sep 16 18:17:05 2020 -0300
+
+    Adjust routes btn
+
+[33mcommit 2310adfe007d5b0c508e320f61f9c7c158e62762[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Wed Sep 16 15:25:20 2020 -0300
+
+    Validates Models
+
+[33mcommit fb33e95cd9ddafe828d847281cc9bd1de5ec1a0e[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Wed Sep 16 14:55:39 2020 -0300
+
+    Img product default
+
+[33mcommit e268a1db052826cefc8d2d61561f43767f41668a[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Wed Sep 16 10:39:11 2020 -0300
+
+    Validation User
+
+[33mcommit 81892e63a9f2dd74ef4e934b1ec726e5b6ea98f9[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Tue Sep 15 12:08:56 2020 -0300
+
+    User Comment in negociation
+
+[33mcommit 7c4f000ea3dac22d54d2f8d1dee42d78f35ec6b4[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Sun Sep 13 21:22:21 2020 -0300
+
+    Adjust routes
+
+[33mcommit e637e3e7e271d8a018057f5b2df87d6d4f6a98f8[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Sun Sep 13 21:13:34 2020 -0300
+
+    Authenticate user
+
+[33mcommit 084f6ada8557d475926a705b17c297775d96b5a8[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Sun Sep 13 17:25:20 2020 -0300
+
+    Install bootstrap
+
+[33mcommit 7aba992f1e5710ada6c57706dfc929c1f1678aea[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Sun Sep 13 16:06:29 2020 -0300
+
+    User comment
+
+[33mcommit 04f80c28a687b453fde06747441be11de25a83c7[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Sun Sep 13 15:28:13 2020 -0300
+
+    User comment
+
+[33mcommit f875c6d513c1e67cae88967dda0de77558f802e1[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Sat Sep 12 22:26:44 2020 -0300
+
+    User start negociation-Sucess
+
+[33mcommit 8bef1a64dbe60ab825cc9a7f2fbe3ce9de5a58ee[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Sat Sep 12 21:48:05 2020 -0300
+
+    User create new product-Sucess
+
+[33mcommit 1a9a8cce89cd7d71055736c17fab8fa7072b65ad[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Sat Sep 12 21:34:52 2020 -0300
+
+    Create Model Order
+
+[33mcommit 47e9b2661cdac16b5271db53234ec7716ff15599[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Sat Sep 12 19:00:19 2020 -0300
+
+    Configure I18n
+
+[33mcommit 6ded5a1ae80f91dfba68e84a2452d3c10f89e6d6[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Sat Sep 12 15:04:17 2020 -0300
+
+    Create Devise
+
+[33mcommit d75098125fee6d8d8a680ee7a92109127a7f93ff[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Sat Sep 12 13:19:31 2020 -0300
+
+    configurate and create testes- rspec
+
+[33mcommit 3fd13d76c40fd826ff64537c9bd6342e1548f99e[m
+Author: reinaldo luiz <reinaldolluiz@gmail.com>
+Date:   Sat Sep 12 13:03:01 2020 -0300
+
+    Language and install capybara and rspec

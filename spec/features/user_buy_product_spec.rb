@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-feature 'Salesman conclued negociation' do 
-  xscenario 'sucessfully' do 
+feature 'User buy product' do 
+  scenario 'sucessfully' do 
     #Arrange
     user = User.create!(name:'Silvio Santos', email:'silvio@sbt.com', password:'12345678')
     other_user = User.create!(name:'Carlos Alberto', email:'carlos@sbt.com', password:'12345678')
@@ -11,18 +11,21 @@ feature 'Salesman conclued negociation' do
     #Act
     login_as(user, scope: :user)
     visit root_path
-    click_on 'Meus Produtos'
+    click_on 'Produtos'
     click_on 'Detalhes'
-    click_on 'Encerrar'
+    click_on 'Negociar'
+    click_on 'Comprar'
     #Assert
     expect(current_path).to eq  product_order_path(Product.last, Order.last)
     expect(page).to have_content('Carro')
     expect(page).to have_content('R$ 150.000,00')
     expect(page).to have_content('O carro da sua vida, não encontrará nada melhor!')
     expect(page).to have_content('Silvio Santos')
-    expect(page).to have_content(user.name)
+    expect(page).to have_content(other_user.name)
     expect(page).to have_css('img[src$="bike.jpg"]')
-    expect(page).to have_content('Gostaria realmente de encerrar a negociação')
+    expect(page).to have_content('Parabéns pela compra, estaremos finalizando o processo com o vendedor')
     expect(page).to have_link('Voltar')
+  end
+  scenario "User can't buy his product"
   end
 end
