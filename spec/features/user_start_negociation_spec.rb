@@ -18,7 +18,7 @@ feature 'User start negociation' do
     image_file = File.open( Rails.root.join('spec/support/bike.jpg'))
     produto.image.attach(io: image_file, filename: "bike.jpg", content_type: "image/png")
     
-    my_order = Order.create!(product: produto, user: other_user, status: :negociation)
+    my_order = Order.create!(product: produto, user: other_user, status: :open)
     #Act
     login_as(other_user, scope: :user)
     visit root_path
