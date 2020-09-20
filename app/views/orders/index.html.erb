@@ -1,7 +1,30 @@
-<div class="card" style="width: 100%;">
-    
-    <div class="card-body">
-      <h3 class="card-title"><%= @order.product.name%></h3>
-      
+<section>
+  <h2>Suas negociação</h2>
+</section>
+<section class='products'>
+  <% if @orders.empty?%>
+    <p>Sem negociação no momento</p>
+  <%else%> 
+  <% @orders.each do |order|%>
+    <div class="card" style="width: 18rem;">
+     <% if order.product.image.attached?%>
+      <%= image_tag order.product.image %>
+     <%else%>
+      <%= image_tag 'https://via.placeholder.com/400.png' %>
+     <%end%>
+      <div class="card-body">
+        <h5 class="card-title"><%= order.product.name%></h5>
+        <p class="card-text"><%= order.product.description%></p>
+        <p class="card-text"><%= order.product.category%></p>
+        <p class="card-text"><%= number_to_currency order.product.price%></p>
+        <p class="card-text"><%= order.product.user.name%></p>
+        <% if order.open?%>
+          <%= link_to 'Detalhes', product_path(id: order.product.id), class:"btn btn-outline-secondary" %>
+        <%else%>
+          <p>Vendido!</p>
+        <%end%>
+      </div>
     </div>
-  </div>
+  <%end%>
+<%end%>
+</section>

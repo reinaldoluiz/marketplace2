@@ -5,8 +5,8 @@
 
 <section class='products'>
   <% if @products.empty?%>
-  <p>Sem produto por enquanto</p>
-<%else%> 
+    <p>Sem produto por enquanto</p>
+  <%else%> 
   <% @products.each do |product|%>
     <div class="card" style="width: 18rem;">
      <% if product.image.attached?%>

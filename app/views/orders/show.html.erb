@@ -1,5 +1,9 @@
 <div class="card" style="width: 100%;">
-   <%= image_tag @order.product.image%>
+    <% if@order.product.image.attached?%>
+      <%= image_tag @order.product.image%>
+      <%else%>
+      <%= image_tag 'https://via.placeholder.com/400.png' %>
+    <%end%>
     <div class="card-body">
       <h3 class="card-title"><%= @order.product.name%></h3>
       <h2 class="card-title"><%=number_to_currency @order.product.price%></h2>
@@ -10,7 +14,7 @@
     <%= render partial: 'comments/comments', locals:{commentable: @order}%>
     <%= render partial: 'comments/form', locals:{commentable: @order}%>
     </div>
-    
+    <%= link_to 'Comprar', orders_path, class:'btn btn-success' %>
   </div>
   
   <div class="card card-body">

@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   resources :orders, only:[:show] do 
     resources :comments, module: :orders
   end
-
+  resources :orders, only: [:index]
 end

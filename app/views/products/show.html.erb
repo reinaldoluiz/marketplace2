@@ -4,7 +4,7 @@
       <%= image_tag @product.image %>
      <%else%>
       <%= image_tag 'https://via.placeholder.com/400.png' %>
-     <%end%>
+  <%end%>
   <div class="card-body">
     <h3 class="card-title"><%= @product.name%></h3>
     <h2 class="card-title"><%=number_to_currency @product.price%></h2>

@@ -8,7 +8,7 @@ feature 'User comment in negociation' do
     produto = Product.create!(name: 'Carro',category:'Automóvel', price: '150000', description: 'O carro da sua vida, não encontrará nada melhor!', user: user )
     image_file = File.open( Rails.root.join('spec/support/bike.jpg'))
     produto.image.attach(io: image_file, filename: "bike.jpg", content_type: "image/png")
-    my_order = Order.create!(product_id: produto.id, user: other_user, status: :negociation)
+    my_order = Order.create!(product_id: produto.id, user: other_user, status: :open)
     #Act
     login_as(other_user, scope: :user)
     visit root_path
