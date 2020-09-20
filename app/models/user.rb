@@ -12,6 +12,8 @@ class User < ApplicationRecord
     self.company = company_find || Company.create(name: company_name)
   end
   def company_name
-    email.split('@')[1].split('.')[0].capitalize
+    if !email.empty?
+      email.split('@')[1].split('.')[0].capitalize
+    end
   end
 end

@@ -26,6 +26,6 @@ feature 'User buy product' do
     expect(page).to have_content('Parabéns pela compra, estaremos finalizando o processo com o vendedor')
     expect(page).to have_link('Voltar')
   end
-  scenario "User can't buy his product"
+  scenario "User can't buy his product" do
   end
 end
