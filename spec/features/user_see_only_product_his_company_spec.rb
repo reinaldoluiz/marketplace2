@@ -3,12 +3,13 @@ require 'rails_helper'
 feature 'User see only his company product' do 
   scenario 'sucessfully' do 
     #Arrange
-    user1_sbt = User.create!(name:'Silvio Santos', email:'silvio@sbt.com', password:'12345678', company:'SBT')
-    user2_sbt = User.create!(name:'Carlos Alberto', email:'carlos@sbt.com', password:'12345678', company:'SBT')
-    user3_sbt = User.create!(name:'Hebe Camargo', email:'hebe@sbt.com', password:'12345678', company:'SBT')
-    user1_globo = User.create!(name:'Luciano Huck', email:'luciano@globo.com', password:'12345678', company:'Globo')
-    user2_globo = User.create!(name:'Ana Maria Braga', email:'ana@globo.com', password:'12345678', company:'Globo')
-    user3_globo = User.create!(name:'Fausto Silva', email:'fausto@globo.com', password:'12345678', company:'Globo')
+    company = Company.create!(name:'SBT')
+    user1_sbt = User.create!(name:'Silvio Santos', email:'silvio@sbt.com', password:'12345678', company: company) 
+    user2_sbt = User.create!(name:'Carlos Alberto', email:'carlos@sbt.com', password:'12345678',company: company)
+    user3_sbt = User.create!(name:'Hebe Camargo', email:'hebe@sbt.com', password:'12345678', company: company)
+    user1_globo = User.create!(name:'Luciano Huck', email:'luciano@globo.com', password:'12345678', company: company)
+    user2_globo = User.create!(name:'Ana Maria Braga', email:'ana@globo.com', password:'12345678', company: company)
+    user3_globo = User.create!(name:'Fausto Silva', email:'fausto@globo.com', password:'12345678', company: company)
     gol2020 = Product.create!(name: 'Gol 2020',category:'Automóvel', price: '150000', description: 'Zero Zero! Melhor oportunidade', user: user1_sbt )
     gol2018 = Product.create!(name: 'Gol 2018',category:'Automóvel', price: '100000', description: 'O carro mais economico da sua vida!', user: user2_sbt )
     celta2020 = Product.create!(name: 'Celta 2020',category:'Automóvel', price: '110000', description: 'A melhor escolha de todas!', user: user3_sbt )
@@ -24,11 +25,10 @@ feature 'User see only his company product' do
     #Act
     login_as(user1_sbt, scope: :user)
     visit root_path 
-    fill_in 'Busca', with: 'Automóvel'
-    click_on 'Pesquisar'
+    click_on 'Produtos'
 
     #Assert
-    expect(current_path).to eq search_path
+    expect(current_path).to eq products_path
     expect(page).to have_content('Gol 2020')
     expect(page).to have_content('Gol 2018')
     expect(page).to have_content('Celta 2020')

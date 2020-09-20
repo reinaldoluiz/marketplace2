@@ -1,11 +1,12 @@
 <section>
+  <h2>Produtos da <%= current_user.company.name%></h2>
   <%= link_to 'Criar novo produto', new_product_path, class:"btn btn-outline-success" %>
 </section>
 
 <section class='products'>
   <% if @products.empty?%>
   <p>Sem produto por enquanto</p>
-<%else%>
+<%else%> 
   <% @products.each do |product|%>
     <div class="card" style="width: 18rem;">
      <% if product.image.attached?%>

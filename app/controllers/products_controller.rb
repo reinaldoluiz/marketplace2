@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
     before_action :authenticate_user!, only: [:index, :show]
     
     def index
-      @products = Product.all
+      @products = Product.all.reject{|product| product.user.company != current_user.company }
     end
   
     def show
