@@ -26,6 +26,4 @@ feature 'User buy product' do
     expect(page).to have_css('img[src$="bike.jpg"]')
     expect(page).to have_content('Vendido!')
   end
-  scenario "User can't buy his product" do
-  end
 end

@@ -1,5 +1,5 @@
 <div class="card" style="width: 100%;">
-    <% if@order.product.image.attached?%>
+    <% if @order.product.image.attached?%>
       <%= image_tag @order.product.image%>
       <%else%>
       <%= image_tag 'https://via.placeholder.com/400.png' %>
